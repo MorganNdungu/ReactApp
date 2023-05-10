@@ -1,15 +1,14 @@
 import './App.css';
-import Todo from './component/todo'
-
+import Navbar from './component/Navbar.js';
+import BasicExample from './component/form';
 function App() {
   return (
     <div className="App">
-     
-        
-        <Todo/>
-      
-      
-    </div>
+      <Navbar />
+      <div className="content">
+        <BasicExample/>
+      </div>
+        </div>
   );
 }
 
