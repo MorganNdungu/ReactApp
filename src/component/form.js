@@ -1,13 +1,29 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-// import './bootstrap/dist/min.css'
 
-function BasicExample() {
+const Todo = ({todo, setTodo, todoList, setTodoList}) => {
+  // const [item, setItem] = useState('');
+  // const [ todolist, setTodolist] =useState([]);
+
+  const handleChange=(event)=>{
+    setTodo(event.target.value);
+    console.log(todo);
+  }
+  
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // let temp = todolist;
+    // temp.push (item);
+    setTodoList([...todoList, todo]);
+    console.log (todoList);
+    // setItem("");
+  }
   return (
-    <Form className="container">
+    <Form className="container" onSubmit={handleSubmit}>
       {/* <Form.Group className="mb-3" controlId="formBasicEmail"> */}
         <Form.Label>add Item</Form.Label>
-        <Form.Control type="text" placeholder="Enter item" /><br></br>
+        <Form.Control type="text" value={todo} onChange={handleChange} placeholder="Enter item" /><br></br>
         {/* <Form.Text className="text-muted"> */}
           {/* We'll never share your email with anyone else. */}
         {/* </Form.Text> */}
@@ -27,4 +43,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Todo;
