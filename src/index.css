@@ -1,28 +1,20 @@
-
-body {
-background-color: bisque;}
 .navbar{
-  padding: 20px;
-  display: flex-end;
-  /* height: 50px;
-  width: 660px; */
-  border-radius: 20px;
-  background-color: aquamarine;
-}
-/* .navbar .links{
+   /* padding: 20px; */
+  /* justify-content: flex-end; */
+  border-radius: 20px; 
+  background-color: aquamarine; 
+ } 
+ .navbar .links a{
   font-size: 20px;
-  text-align: right;
-  display: flex-end;
-  cursor: pointer;
-} */
+  align-items: flex-end;
+  justify-content: center;
+}
 .navbar a:hover{
   color: rgb(220, 6, 20);
 }
 .container{
-  padding: 20px;
+  /* padding: 20px; */
   background-color: aqua;
   border-radius: 20px;
 }
-Form.control[type=email], Form.control[type=password] {
-align-items: flex-end;
-}
+

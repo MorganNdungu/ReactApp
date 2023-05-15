@@ -2,7 +2,7 @@
 const Navbar = ()=>{
     return(
         <nav className="navbar">
-        {/* <h2>TodoApp...</h2> */}
+        <h2>TodoApp...</h2>
         <div className="links">
             <a href="#">Home</a>
             
