@@ -1,10 +1,10 @@
-import Todo from "./form";
+import Todo from "./todo";
 
-const MyTodoList= ({todoList})=>{
+const MyTodoList= ({todoList, setTodoList})=>{
     return(
         <div>
             <h3>todo list....</h3>
-            <h4>{todoList.map((item)=>(<Todo item={item}/>))}</h4>
+            <h4>{todoList.map((item)=>(<Todo key={item.id} item={item} todoList={todoList} setTodoList={setTodoList}/>))}</h4>
         </div>
     )
 }
